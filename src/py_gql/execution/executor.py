@@ -126,9 +126,9 @@ class Executor(ResolutionContext):
         else:
             # Default type resolution
             maybe_type = (
-                value.get("__typename__", None)
+                value.get("__typename", None)
                 if isinstance(value, dict)
-                else getattr(value, "__typename__", None)
+                else getattr(value, "__typename", None)
             )
 
         if maybe_type is None:
